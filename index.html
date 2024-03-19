@@ -843,6 +843,20 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+	  <script>
+	function loadCSS(url) {
+		const link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.href = url;
+		document.head.appendChild(link);
+	}
+
+	// Call loadCSS function to load your external CSS file lazily
+	window.addEventListener('load', function() {
+		loadCSS('css/style.css');
+	});
+</script>
     
   </body>
 </html>
